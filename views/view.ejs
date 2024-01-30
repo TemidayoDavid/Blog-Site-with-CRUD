@@ -1,0 +1,30 @@
+<%- include ("partials/header.ejs") %>
+
+<div class="container my-5">
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+      
+      <h1 class="text-body-emphasis"> <%= title %></h1>
+      <p class="col-lg-8 mx-auto fs-5 text-muted">
+        <p> <%= content %></p>
+      </p>
+      <div class="d-inline-flex gap-2 mb-5">
+        <form action="/delete" method="post">
+            <input type="text" hidden name="postId" value="<%= postId %>">
+            <input class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="submit" name="delete" value="delete" id="delete">
+        </form>
+       
+        <a href="/edit/<%= postId %>"><input class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="submit" value="Edit" ></a>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<%- include ("partials/footer.ejs") %>
